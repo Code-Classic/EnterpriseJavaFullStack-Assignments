@@ -153,7 +153,7 @@ class Host {
 		}
 
 	}
-
+//Declaring Winner
 	public void declaringWinner() {
 		Player winner = new Player();
 		for (int i = 0; i < players.length - 1; i++) {
