@@ -49,10 +49,10 @@ class Guesser {
 	Scanner scanner = new Scanner(System.in);
 
 	public int selectingNumber() {
-		System.out.println("---------------------------");
+		System.out.println("----------------------------");
 		System.out.print("Guesser select a number: ");
 		guessedNumber = scanner.nextInt();
-		System.out.println("---------------------------\n");
+		System.out.println("----------------------------\n");
 		return guessedNumber;
 	}
 }
