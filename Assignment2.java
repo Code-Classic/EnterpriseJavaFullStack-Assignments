@@ -43,7 +43,7 @@ class Player {
 	}
 }
 
-//Guess
+//Guesser
 class Guesser {
 	int guessedNumber;
 	Scanner scanner = new Scanner(System.in);
