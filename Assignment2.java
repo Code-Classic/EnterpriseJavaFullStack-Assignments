@@ -115,6 +115,7 @@ class Host {
 	public void nextRound() {
 		if (round == 4) {
 			System.out.println("\nWelcome to the final round!");
+			System.out.println("*****Note: Players will not be able to select the same number as opponent in this round*****");
 			askingGuesser();
 			nextRoundInput();
 			checkingResult();
@@ -139,11 +140,14 @@ class Host {
 			for (int i = 0; i < playerCount; i++) {
 				System.out.print(players[i].playerName + " choose your number: ");
 				players[i].playerSelectedNumber = scanner.nextInt();
-				for (int j = i; j >= 0; j--) {
-					if (players[i].playerSelectedNumber == players[j].playerSelectedNumber) {
-
+					if (i != 0) { // Condition to check if this is not the first element
+						for (int j = (i - 1); j >= 0; j--) { // Iterating to check duplicate entries
+							if (players[i].playerSelectedNumber == players[j].playerSelectedNumber) { // If duplicate found.
+								System.out.println("Number already selected, choose a different number");
+								i--;
+							}
+						}
 					}
-				}
 			}
 		} else {
 			for (int i = 0; i < playerCount; i++) {
